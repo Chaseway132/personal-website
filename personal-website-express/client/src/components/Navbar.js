@@ -7,15 +7,24 @@ const Navbar = () => {
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        setIsDarkMode(true);
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        setIsDarkMode(false);
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    } catch (e) {
+      // Fallback to light mode if localStorage is not available
       setIsDarkMode(false);
       document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   }, []);
 
@@ -27,12 +36,25 @@ const Navbar = () => {
     const newDarkMode = !isDarkMode;
     setIsDarkMode(newDarkMode);
 
-    if (newDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+    try {
+      if (newDarkMode) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    } catch (e) {
+      // If localStorage is not available, still apply the theme
+      if (newDarkMode) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
     }
   };
 

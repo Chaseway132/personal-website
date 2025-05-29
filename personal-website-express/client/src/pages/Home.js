@@ -81,22 +81,22 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                 style={{ minWidth: 150 }}
               >
                 <span className="relative z-10">View Projects</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="group relative bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 border-2 border-gray-300 dark:border-gray-600 hover:border-blue-400 dark:hover:border-blue-500"
                 style={{ minWidth: 150 }}
               >
                 <span className="relative z-10">Contact Me</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </a>
+              </Link>
             </motion.div>
           </div>
           <motion.div
@@ -294,21 +294,12 @@ const Home = () => {
             </div>
           )}
           <div className="text-center mt-8">
-            <a
-              href="/projects"
-              style={{
-                display: 'inline-block',
-                backgroundColor: '#2563eb',
-                color: 'white',
-                fontWeight: '500',
-                padding: '12px 32px',
-                borderRadius: '6px',
-                textDecoration: 'none',
-                textAlign: 'center'
-              }}
+            <Link
+              to="/projects"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300"
             >
               View All Projects
-            </a>
+            </Link>
           </div>
         </section>
       </div>

@@ -2,14 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = {
-  mode: 'development',
-  entry: './client/src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
+
+  return {
+    mode: argv.mode || 'development',
+    entry: './client/src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: isProduction ? 'bundle.[contenthash].js' : 'bundle.js',
+      publicPath: '/',
+      clean: true
+    },
   module: {
     rules: [
       {
@@ -37,19 +41,25 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './client/public/index.html',
-      filename: 'index.html'
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: 'client/public/images',
-          to: 'images',
-          noErrorOnMissing: true
-        }
-      ]
-    })
-  ]
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './client/public/index.html',
+        filename: 'index.html',
+        minify: isProduction
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'client/public/images',
+            to: 'images',
+            noErrorOnMissing: true
+          }
+        ]
+      })
+    ],
+    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    optimization: {
+      minimize: isProduction
+    }
+  };
 };

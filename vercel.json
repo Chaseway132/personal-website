@@ -19,8 +19,24 @@
       "dest": "personal-website-express/server/simple-server.js"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "personal-website-express/build/static/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "personal-website-express/build/images/$1"
+    },
+    {
+      "src": "/bundle.(.*).js",
+      "dest": "personal-website-express/build/bundle.$1.js"
+    },
+    {
+      "src": "/bundle.js",
+      "dest": "personal-website-express/build/bundle.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "personal-website-express/build/$1"
+      "dest": "personal-website-express/build/index.html"
     }
   ]
 }
