@@ -3,14 +3,18 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 package-lock.json
 
 # Production builds
-personal-website/personal-website-express/build/
-personal-website/personal-website-express/client/build/
+personal-website-express/build/
+personal-website-express/client/build/
+/build
+/.next/
+/out/
 
 # Environment variables
-.env
+.env*
 .env.local
 .env.development.local
 .env.test.local
@@ -30,6 +34,7 @@ personal-website/personal-website-express/client/build/
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.pem
 
 # Logs
 logs
@@ -49,6 +54,13 @@ coverage/
 
 # Dependency directories
 jspm_packages/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # Optional npm cache directory
 .npm
@@ -95,3 +107,10 @@ jspm_packages/
 
 # TernJS port file
 .tern-port
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

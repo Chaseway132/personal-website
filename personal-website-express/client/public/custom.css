@@ -1,0 +1,42 @@
+/* Custom button styles */
+.custom-button {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-right: 16px;
+  width: auto;
+  text-align: center;
+}
+
+.custom-button-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.custom-button-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.custom-button-secondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.custom-button-secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .custom-button-secondary {
+    background-color: #374151;
+    color: white;
+  }
+  
+  .custom-button-secondary:hover {
+    background-color: #4b5563;
+  }
+}

@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon personal-website-express/server/simple-server.js",
-    "client": "cd personal-website-express && webpack --watch --mode development",
-    "build": "cd personal-website-express && npm install && npx webpack --mode production",
-    "start": "npm run build && node personal-website-express/server/simple-server.js",
-    "clean": "rimraf personal-website-express/client/build"
+    "server": "nodemon server/simple-server.js",
+    "client": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "start": "npm run build && node server/simple-server.js",
+    "clean": "rimraf client/build"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +32,6 @@
     "concurrently": "^9.1.2",
     "core-js": "^3.42.0",
     "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.3",
     "nodemon": "^3.1.10",
     "rimraf": "^6.0.1",
     "style-loader": "^4.0.0",
