@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website - Express + React
 
-## Getting Started
+A modern personal website built with Express.js backend and React frontend, featuring a responsive design and interactive components.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Backend**: Express.js
+- **Frontend**: React with React Router
+- **Build Tool**: Webpack
+- **Styling**: CSS with custom animations
+- **Animation**: Framer Motion
+- **Deployment**: Vercel
+
+## 📁 Project Structure
+
+```
+personal-website-express/
+├── client/
+│   ├── src/
+│   │   ├── components/     # Reusable React components
+│   │   ├── pages/         # Page components
+│   │   └── App.js         # Main React app
+│   └── public/            # Static assets
+├── server/
+│   └── simple-server.js   # Express server
+├── build/                 # Webpack build output
+└── webpack.config.js      # Webpack configuration
+```
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Chaseway132/personal-website.git
+cd personal-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+cd personal-website-express
+npm install
+```
+
+### Development
+
+Run the development server with hot reloading:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start:
+- Express server on `http://localhost:3000`
+- Webpack dev server with hot reloading
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the project for production:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 Available Scripts
 
-## Deploy on Vercel
+- `npm run dev` - Start development server with hot reloading
+- `npm run build` - Build for production
+- `npm start` - Start production server
+- `npm run clean` - Clean build directory
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is configured for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the configuration from `vercel.json`
+3. The build process will run automatically
+
+## 🎨 Features
+
+- Responsive design
+- Interactive animations with Framer Motion
+- Single Page Application (SPA) with React Router
+- Express.js API endpoints
+- Optimized production builds with Webpack
+
+## 📝 License
+
+This project is licensed under the ISC License.
