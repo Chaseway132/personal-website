@@ -1,0 +1,13 @@
+This is a placeholder file to remind you to add your actual image file here.
+
+To add your profile image:
+1. Save your profile photo as "peter-profile.jpeg" or "peter-profile.jpg"
+2. Place it in this folder (public/images)
+3. Restart the server or refresh the browser
+
+The image should then appear on your website.
+
+Note: If you're having trouble with the image not displaying, check:
+- The file name (case-sensitive)
+- The file extension (.jpg, .jpeg, .png)
+- The file path in the HTML code

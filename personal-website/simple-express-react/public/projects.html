@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Peter Mwangi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="/" class="flex-shrink-0 flex items-center">
+            <span class="text-xl font-bold text-gray-800">Peter Mwangi</span>
+          </a>
+        </div>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            Home
+          </a>
+          <a href="/projects.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-600 hover:text-blue-800 hover:bg-gray-100">
+            Projects
+          </a>
+          <a href="/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            About
+          </a>
+          <a href="/contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="flex md:hidden items-center">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          Home
+        </a>
+        <a href="/projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:text-blue-800 hover:bg-gray-100">
+          Projects
+        </a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          About
+        </a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-gray-900">
+        My Projects
+      </h1>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <!-- Project 1 -->
+      <div id="charity-dao" class="mb-16 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="relative h-64 bg-gray-200 flex items-center justify-center">
+            <!-- Replace this with your project image -->
+            <!-- Example: <img src="/images/charity-dao-project.jpg" alt="Charity DAO Project" class="w-full h-full object-cover"> -->
+            <span class="text-xl font-semibold text-gray-500">
+              Add project image here:<br>
+              Save as charity-dao-project.jpg<br>
+              Place in /public/images folder
+            </span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Building Trustworthy Charity Platforms in Kenya: A Decentralised Approach with DAO</h2>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Technologies Used</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Blockchain</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Smart Contracts</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Express</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">TypeScript</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Solidity</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Web3.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">IPFS</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Project Description</h3>
+              <p class="text-gray-600 mb-4">
+                This dissertation project addresses the critical challenge of trust in charitable organizations in Kenya by leveraging blockchain technology and decentralized autonomous organization (DAO) principles.
+              </p>
+              <p class="text-gray-600 mb-4">
+                The platform enables transparent tracking of donations, ensures accountability through smart contracts, and empowers donors to participate in decision-making processes. By implementing a DAO structure, the project creates a self-governing ecosystem where stakeholders can propose, vote on, and execute charitable initiatives.
+              </p>
+              <p class="text-gray-600">
+                Key features include immutable transaction records, real-time fund tracking, democratic governance mechanisms, and integration with local financial systems to ensure accessibility for Kenyan users.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Project Outcomes</h3>
+              <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                <li>Increased transparency in charitable donations and fund utilization</li>
+                <li>Enhanced donor confidence through verifiable impact tracking</li>
+                <li>Reduced administrative overhead and operational costs</li>
+                <li>Created a model for democratic governance in charitable organizations</li>
+                <li>Established a framework that can be adapted for other regions facing similar challenges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div id="electronic-voting" class="mb-16 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <div class="relative h-64 bg-gray-200 flex items-center justify-center">
+            <!-- Replace this with your project image -->
+            <!-- Example: <img src="/images/electronic-voting-project.jpg" alt="Electronic Voting Project" class="w-full h-full object-cover"> -->
+            <span class="text-xl font-semibold text-gray-500">
+              Add project image here:<br>
+              Save as electronic-voting-project.jpg<br>
+              Place in /public/images folder
+            </span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Electronic Voting Innovation Project</h2>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Technologies Used</h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Web3</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Truffle</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Ganache</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">MetaMask</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">NodeJS</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Ethereum</span>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Project Description</h3>
+              <p class="text-gray-600 mb-4">
+                The Electronic Voting Innovation Project was developed to address the challenges of traditional voting systems, including security concerns, lack of transparency, and inefficiency.
+              </p>
+              <p class="text-gray-600 mb-4">
+                By leveraging blockchain technology, this system ensures that votes are immutable, transparent, and verifiable while maintaining voter privacy. The solution includes a user-friendly interface for voters and administrators, secure authentication mechanisms, and real-time result tabulation.
+              </p>
+              <p class="text-gray-600">
+                The project demonstrates how blockchain can revolutionize democratic processes by eliminating the possibility of fraud, reducing costs, and increasing accessibility for voters.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-semibold mb-2 text-gray-800">Project Outcomes</h3>
+              <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                <li>Created a tamper-proof voting system with cryptographic security</li>
+                <li>Enabled transparent vote counting while preserving voter anonymity</li>
+                <li>Reduced the cost and logistical complexity of election administration</li>
+                <li>Increased voter participation through improved accessibility</li>
+                <li>Developed a scalable solution that can be adapted for various election types</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-gray-600">
+            &copy; <span id="current-year"></span> Peter Mwangi. All rights reserved.
+          </p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://github.com/Chaseway132" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/peter-mwangi-b123b7213/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:petermwangi7752@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

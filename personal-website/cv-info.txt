@@ -1,0 +1,96 @@
+You can paste your CV information here, and I'll be able to read it.
+PETER MWANGI 
+Nairobi, NBO |+254 724942057 | 
+petermwangi7752@gmail.com 
+https://www.linkedin.com/in/peter-mwangi-b123b7213/ 
+EDUCATION 
+STRATHMORE UNIVERSITY 
+Masters of Science: - 
+Information Systems Security (Currently pursuing) 
+Madaraka Estate, Nairobi 
+Expected May 2025 
+MURANG’A UNIVERSITY OF SCIENCE AND TECHNOLOGY 
+Major in Software Engineering 
+Relevant Coursework: Software Engineering; Operating Systems; Algorithms; Computer Networking; System Design; 
+Artificial intelligence; Cyber Security; Mobile Application Development – Android; Web Application Development 
+Aug 2017 - Dec 2021 
+Kiharu, Murang’a 
+WORK EXPERIENCE 
+@iLabAfrica 
+Research Scholar, Cyber Security Department 
+Nairobi, NBO 
+July 2023 – Present 
+• Conducting cutting-edge research in the field of cyber security, focusing on emerging threats, vulnerability assessments, 
+and mitigation strategies. 
+• Collaborating with a multidisciplinary team to develop innovative solutions and countermeasures against cyber threats, 
+addressing critical security challenges. 
+• Investigating and analyzing cyber incidents, identifying patterns, and developing recommendations to strengthen 
+security frameworks. 
+• Trainings - penetration testing, CEH, Digital Forensics 
+• Security Operations Center (SOC) analyst 
+Scratch and Script Ltd 
+Research Assistant – Digital Forensics 
+• Research and Analysis – Self-paced Online Instructor & Coursework Material Videos, Self-paced Videos on Lab 
+Demos. Online Self-Paced Videos & Coursework material on our platform. Published Self-paced Videos on Lab 
+Demos 
+• Stakeholder Engagement – Engaged Industry Professionals for Q & A interviews. Course Trailers, Published Q & A 
+Interviews with Professionals 
+ICT Authority 
+Presidential Digital Talent Program (PDTP) intern 
+Nairobi, NBO 
+Dec 2022 – July 2023 
+• Digitization of 5,000 Government Services – Streamlined operational workflows and implemented automated systems, 
+resulting in a 40% reduction in manual errors and saving 20+ hours per week in data entry and processing tasks. 
+• Prepared daily, weekly, and monthly reports on the status of digitization, providing stakeholders with real-time progress 
+updates and ensuring accountability. 
+• Collaborated with government departments to identify opportunities for digitization, resulting in a 20% increase in the 
+number of services successfully onboarded. 
+• KASNEB Deployment – Successfully upgraded software systems, leading to enhanced functionality, improved security, 
+and streamlined processes, resulting in a 20% increase in operational efficiency. 
+• Implemented network improvements, resulting in a 30% reduction in network downtime and increased overall network 
+stability. 
+• Conduct regular maintenance activities, resulting in a 15% reduction in system errors and improved overall reliability of 
+ICT infrastructures. 
+UNIVERSITY PROJECTS 
+Electronic Voting Innovation Project 
+Sep 2021 
+Role: Developer 
+• Developed a secure and transparent voting system utilizing Web3, Truffle, Ganache, JavaScript, MetaMask wallet, and 
+NodeJS technologies. 
+• Designed and implemented smart contracts on the Ethereum blockchain to ensure the integrity and immutability of 
+voting data, eliminating the possibility of tampering or fraud. 
+PSV Management System 
+Role: Developer | 
+Sep 2019 
+• Designed and implemented a management system for the PSV (Public Service Vehicle) Sacco of Murang'a town using Visual 
+Basic. 
+• Significantly improved operational efficiency, reduced manual errors, and enhanced overall management of the PSV Sacco, 
+resulting in better service delivery and increased customer satisfaction. 
+ACTIVITIES 
+VISIONARY YOUTH FOUNDATION 
+Murang'a County 
+March 2018 – Present 
+• Co-founded a group of dedicated volunteers and successfully recruited and trained a team of 20 volunteers. 
+• Organized and conducted educational training sessions for over 20 primary school students in Murang'a, covering 
+various subjects and study skills. 
+• Actively engaged with the children by organizing weekly recreational activities, such as sports events, arts and crafts 
+sessions, and educational field trips, providing them with opportunities for personal growth and enrichment. 
+• Developed and implemented ICT training programs for volunteers and students, enhancing their digital literacy skills 
+and empowering them to utilize technology effectively. 
+ADDITIONAL 
+Technical Skills: Advanced in SQL, Kotlin, JavaScript, HTML/CSS; Proficient in MAD – Android Platform (Kotlin, XML), 
+Cyber Security, Linux, pentesting 
+Soft Skills - Effective Communication: Facilitated communication between cross-functional teams, ensuring project milestones 
+were met and delivering successful outcomes; Leadership: Represented the class: Acted as a liaison between the students and the 
+faculty, ensuring that their concerns, suggestions, and feedback were effectively communicated and addressed; Teamwork: 
+Worked towards shared goals: Aligned efforts and coordinated activities with the team to achieve the common objective of 
+successfully digitizing government services, prioritizing teamwork and collaboration over individual accomplishments; 
+Adaptability: Thrived in a fast-paced and dynamic environment, quickly adjusting to new technologies and industry trends. 
+Languages: Fluent in English; Swahili; Kikuyu 
+Certifications & Training: Certified Ethical Hacker (C|EH) by EC Council, Online Course System Administration and IT 
+Infrastructure Services (Coursera); HCIA -Storage (Huawei); IT Security: Defense against the digital dark arts (Coursera); Cyber 
+security (CISCO); Python programming (CISCO);in introduction to unhatched Linux (CISCO); Networking Essentials and 
+packet tracer (CISCO); Introduction to Data Science (CISCO); Getting Started with Power BI event (STYAVA); Internet of 
+Things in Azure event (STYAVA), Cyber Shujaa – Security Analyst 
+Awards: Certificate of Merit – 2nd position at both sub-county and County Level at Kenya Science and Engineering Fair 2014 
+(High School), Guest Speaker Award – TEMS ICT EXPO 2025 (Cyber Security) 

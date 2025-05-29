@@ -1,0 +1,12 @@
+# Error Log
+
+Paste any errors you encounter here. This will help us troubleshoot and fix issues with your website.
+
+Format for logging errors:
+---
+Date: [Date when error occurred]
+Page/Component: [Where the error occurred]
+Error Message: [The exact error message]
+Steps to Reproduce: [How to trigger the error]
+---
+

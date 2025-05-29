@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Peter Mwangi</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="/" class="flex-shrink-0 flex items-center">
+            <span class="text-xl font-bold text-gray-800">Peter Mwangi</span>
+          </a>
+        </div>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="/" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            Home
+          </a>
+          <a href="/projects.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            Projects
+          </a>
+          <a href="/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            About
+          </a>
+          <a href="/contact.html" class="px-3 py-2 rounded-md text-sm font-medium text-blue-600 hover:text-blue-800 hover:bg-gray-100">
+            Contact
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="flex md:hidden items-center">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          Home
+        </a>
+        <a href="/projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          Projects
+        </a>
+        <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          About
+        </a>
+        <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:text-blue-800 hover:bg-gray-100">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-gray-900">
+        Contact Me
+      </h1>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Form -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Get In Touch</h2>
+          <form id="contact-form" class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+              <input type="text" id="subject" name="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" required></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+          <div id="form-success" class="mt-4 p-4 bg-green-100 text-green-700 rounded-md hidden">
+            Thank you for your message! I'll get back to you as soon as possible.
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Contact Information</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-600">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ml-3 text-gray-600">
+                  <p>petermwangi7752@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-600">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="ml-3 text-gray-600">
+                  <p>[Phone number placeholder]</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 h-6 w-6 text-blue-600">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="ml-3 text-gray-600">
+                  <p>Nairobi, NBO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Connect With Me</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <a href="https://github.com/Chaseway132" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-md hover:bg-gray-100 transition duration-300">
+                <i class="fab fa-github text-2xl text-gray-700"></i>
+                <span class="ml-3 text-gray-700">GitHub</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/peter-mwangi-b123b7213/" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-md hover:bg-gray-100 transition duration-300">
+                <i class="fab fa-linkedin text-2xl text-blue-700"></i>
+                <span class="ml-3 text-gray-700">LinkedIn</span>
+              </a>
+
+              <a href="mailto:petermwangi7752@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-md hover:bg-gray-100 transition duration-300">
+                <i class="fas fa-envelope text-2xl text-red-500"></i>
+                <span class="ml-3 text-gray-700">Email</span>
+              </a>
+
+              <a href="https://wa.me/[your-whatsapp-number]" target="_blank" rel="noopener noreferrer" class="flex items-center p-3 rounded-md hover:bg-gray-100 transition duration-300">
+                <i class="fab fa-whatsapp text-2xl text-green-500"></i>
+                <span class="ml-3 text-gray-700">WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-gray-600">
+            &copy; <span id="current-year"></span> Peter Mwangi. All rights reserved.
+          </p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://github.com/Chaseway132" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/peter-mwangi-b123b7213/" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:petermwangi7752@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-700">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // In a real application, you would send the form data to your server here
+      // For this demo, we'll just show a success message
+      document.getElementById('form-success').classList.remove('hidden');
+
+      // Reset the form
+      this.reset();
+
+      // Hide the success message after 5 seconds
+      setTimeout(function() {
+        document.getElementById('form-success').classList.add('hidden');
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

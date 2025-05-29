@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "personal-website/personal-website-express/server/simple-server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "personal-website/personal-website-express/build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "personal-website/personal-website-express/server/simple-server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "personal-website/personal-website-express/build/$1"
+    }
+  ]
+}
