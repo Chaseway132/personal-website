@@ -1,1 +1,1 @@
-web: cd personal-website-express && npm start
+web: node personal-website-express/server/simple-server.js
