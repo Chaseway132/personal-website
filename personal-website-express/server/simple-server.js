@@ -60,6 +60,21 @@ app.get('/test', (req, res) => {
   res.json({ message: 'Server is working!', timestamp: new Date().toISOString() });
 });
 
+// Simple HTML test route
+app.get('/simple', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head><title>Simple Test</title></head>
+    <body>
+      <h1>Server is working!</h1>
+      <p>If you can see this, the server is responding correctly.</p>
+      <p>Time: ${new Date().toISOString()}</p>
+    </body>
+    </html>
+  `);
+});
+
 // API routes for projects
 app.get('/api/projects', (req, res) => {
   // Return projects data
