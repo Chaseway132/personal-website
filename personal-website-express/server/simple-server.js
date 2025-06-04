@@ -42,6 +42,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/public')));
 app.use(express.static(path.join(__dirname, '../build')));
 
+// Serve bundle.js specifically
+app.get('/bundle*.js', (req, res) => {
+  const filePath = path.join(__dirname, '../build', req.path);
+  console.log('Serving JS file:', filePath);
+  res.sendFile(filePath);
+});
+
 // Add debugging
 console.log('Static file paths:');
 console.log('Public path:', path.join(__dirname, '../client/public'));
@@ -167,6 +174,7 @@ app.get('/upload', (req, res) => {
 
 // Serve index.html for all other routes
 app.get('*', (req, res) => {
+  console.log('Catch-all route for path:', req.path);
   res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
