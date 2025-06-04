@@ -42,6 +42,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/public')));
 app.use(express.static(path.join(__dirname, '../build')));
 
+// Add debugging
+console.log('Static file paths:');
+console.log('Public path:', path.join(__dirname, '../client/public'));
+console.log('Build path:', path.join(__dirname, '../build'));
+console.log('Index.html path:', path.join(__dirname, '../build/index.html'));
+
+// Test route
+app.get('/test', (req, res) => {
+  res.json({ message: 'Server is working!', timestamp: new Date().toISOString() });
+});
+
 // API routes for projects
 app.get('/api/projects', (req, res) => {
   // Return projects data
