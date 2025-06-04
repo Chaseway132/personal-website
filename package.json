@@ -16,6 +16,10 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "framer-motion": "^12.11.1",
