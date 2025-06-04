@@ -5,6 +5,12 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || '0.0.0.0';
+
+console.log('Environment PORT:', process.env.PORT);
+console.log('Environment HOST:', process.env.HOST);
+console.log('Using PORT:', PORT);
+console.log('Using HOST:', HOST);
 
 // Configure multer for file uploads
 const storage = multer.diskStorage({
@@ -193,6 +199,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server is running on ${HOST}:${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Railway URL should be accessible now`);
 });
