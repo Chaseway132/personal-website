@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon personal-website-express/server/simple-server.js",
-    "client": "webpack --watch --mode development",
-    "build": "webpack --mode production",
+    "client": "npx webpack --watch --mode development",
+    "build": "npx webpack --mode production",
     "start": "node personal-website-express/server/simple-server.js",
-    "clean": "rimraf personal-website-express/build"
+    "clean": "rimraf personal-website-express/build",
+    "postinstall": "echo 'Dependencies installed successfully'"
   },
   "keywords": [],
   "author": "",
