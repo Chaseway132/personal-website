@@ -8,7 +8,8 @@
     "server": "nodemon personal-website-express/server/simple-server.js",
     "client": "cd personal-website-express && webpack --watch --mode development",
     "build": "cd personal-website-express && npm install && npx webpack --mode production",
-    "start": "npm run build && node personal-website-express/server/simple-server.js",
+    "start": "node personal-website-express/server/simple-server.js",
+    "railway:build": "cd personal-website-express && npm install && npx webpack --mode production",
     "clean": "rimraf personal-website-express/client/build"
   },
   "keywords": [],
