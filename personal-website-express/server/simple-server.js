@@ -237,7 +237,24 @@ app.get('/upload', (req, res) => {
 // Serve index.html for all other routes
 app.get('*', (req, res) => {
   console.log('Catch-all route for path:', req.path);
-  res.sendFile(path.join(__dirname, '../build/index.html'));
+  const indexPath = path.join(__dirname, '../build/index.html');
+  console.log('Trying to serve index.html from:', indexPath);
+
+  // Check if file exists
+  const fs = require('fs');
+  if (fs.existsSync(indexPath)) {
+    console.log('index.html exists, serving it');
+    res.sendFile(indexPath);
+  } else {
+    console.log('index.html NOT FOUND at:', indexPath);
+    res.status(404).send(`
+      <h1>Error: index.html not found</h1>
+      <p>Looking for file at: ${indexPath}</p>
+      <p>Current working directory: ${process.cwd()}</p>
+      <p><a href="/debug">Check build files</a></p>
+      <p><a href="/test">Test server</a></p>
+    `);
+  }
 });
 
 app.listen(PORT, HOST, () => {
