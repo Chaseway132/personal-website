@@ -44,10 +44,11 @@ const upload = multer({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Remove any restrictive CSP headers for now
+// DISABLE CSP entirely to fix React loading issue
 app.use((req, res, next) => {
-  // Allow unsafe-eval for development/debugging
-  res.setHeader('Content-Security-Policy', "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; img-src 'self' data: https:; font-src 'self' data: https:;");
+  // Remove all CSP restrictions for now
+  // res.setHeader('Content-Security-Policy', "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; img-src 'self' data: https:; font-src 'self' data: https:;");
+  console.log('CSP headers disabled for debugging');
   next();
 });
 
