@@ -95,6 +95,18 @@ app.get('/debug', (req, res) => {
   }
 });
 
+// Debug route to check index.html content
+app.get('/debug-html', (req, res) => {
+  const fs = require('fs');
+  const indexPath = path.join(__dirname, '../build/index.html');
+  try {
+    const htmlContent = fs.readFileSync(indexPath, 'utf8');
+    res.send(`<pre>${htmlContent}</pre>`);
+  } catch (error) {
+    res.send(`Error reading index.html: ${error.message}`);
+  }
+});
+
 // Simple HTML test route
 app.get('/simple', (req, res) => {
   res.send(`

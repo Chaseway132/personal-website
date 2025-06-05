@@ -7,7 +7,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/simple-server.js",
     "client": "webpack --watch --mode development",
-    "build": "webpack --mode production",
+    "build": "rimraf build && webpack --mode production",
     "start": "node server/simple-server.js",
     "clean": "rimraf client/build"
   },
