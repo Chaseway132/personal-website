@@ -234,6 +234,55 @@ app.get('/upload', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/public/upload.html'));
 });
 
+// Add a route to serve index.html with debugging
+app.get('/debug-react', (req, res) => {
+  const fs = require('fs');
+  const indexPath = path.join(__dirname, '../build/index.html');
+
+  if (fs.existsSync(indexPath)) {
+    let html = fs.readFileSync(indexPath, 'utf8');
+
+    // Add debugging script before the closing body tag
+    const debugScript = `
+    <script>
+      console.log('=== REACT DEBUG START ===');
+      console.log('DOM loaded, checking for React...');
+      console.log('Root element:', document.getElementById('root'));
+
+      // Check if bundle loaded
+      window.addEventListener('load', function() {
+        console.log('Window loaded');
+        console.log('React:', typeof React !== 'undefined' ? 'LOADED' : 'NOT LOADED');
+        console.log('ReactDOM:', typeof ReactDOM !== 'undefined' ? 'LOADED' : 'NOT LOADED');
+
+        setTimeout(function() {
+          const root = document.getElementById('root');
+          console.log('Root element after 2s:', root);
+          console.log('Root innerHTML:', root ? root.innerHTML : 'NO ROOT');
+          console.log('Root children count:', root ? root.children.length : 'NO ROOT');
+        }, 2000);
+      });
+
+      // Catch any errors
+      window.addEventListener('error', function(e) {
+        console.error('=== JAVASCRIPT ERROR ===');
+        console.error('Error:', e.error);
+        console.error('Message:', e.message);
+        console.error('Filename:', e.filename);
+        console.error('Line:', e.lineno);
+      });
+
+      console.log('=== REACT DEBUG END ===');
+    </script>
+    `;
+
+    html = html.replace('</body>', debugScript + '</body>');
+    res.send(html);
+  } else {
+    res.status(404).send('index.html not found');
+  }
+});
+
 // Serve index.html for all other routes
 app.get('*', (req, res) => {
   console.log('Catch-all route for path:', req.path);
