@@ -45,7 +45,9 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './client/public/index.html',
         filename: 'index.html',
-        minify: isProduction
+        inject: 'body',
+        minify: isProduction,
+        cache: false
       }),
       new CopyWebpackPlugin({
         patterns: [
