@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: personal-website-express
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+    healthCheckPath: /test
+    autoDeploy: false
