@@ -44,6 +44,13 @@ const upload = multer({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Remove any restrictive CSP headers for now
+app.use((req, res, next) => {
+  // Allow unsafe-eval for development/debugging
+  res.setHeader('Content-Security-Policy', "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; img-src 'self' data: https:; font-src 'self' data: https:;");
+  next();
+});
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '../client/public')));
 app.use(express.static(path.join(__dirname, '../build')));
@@ -64,6 +71,28 @@ console.log('Index.html path:', path.join(__dirname, '../build/index.html'));
 // Test route
 app.get('/test', (req, res) => {
   res.json({ message: 'Server is working!', timestamp: new Date().toISOString() });
+});
+
+// Debug route to check build files
+app.get('/debug', (req, res) => {
+  const fs = require('fs');
+  const buildPath = path.join(__dirname, '../build');
+  try {
+    const files = fs.readdirSync(buildPath);
+    res.json({
+      message: 'Build directory contents',
+      buildPath: buildPath,
+      files: files,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    res.json({
+      error: 'Could not read build directory',
+      buildPath: buildPath,
+      errorMessage: error.message,
+      timestamp: new Date().toISOString()
+    });
+  }
 });
 
 // Simple HTML test route

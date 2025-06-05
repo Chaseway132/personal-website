@@ -57,7 +57,7 @@ module.exports = (env, argv) => {
         ]
       })
     ],
-    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    devtool: isProduction ? false : 'eval-source-map',
     optimization: {
       minimize: isProduction
     }
