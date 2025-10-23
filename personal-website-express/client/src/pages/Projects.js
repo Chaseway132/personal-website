@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { projects } from '../data/projects';
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projectList, setProjectList] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Fetch projects from the API
-    fetch('/api/projects')
-      .then(response => response.json())
-      .then(data => {
-        setProjects(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching projects:', error);
-        setLoading(false);
-      });
+    // Load projects from static data
+    setProjectList(projects);
   }, []);
 
   return (
@@ -43,7 +35,7 @@ const Projects = () => {
         <div className="text-center">Loading projects...</div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projectList.map((project, index) => (
             <motion.div
               key={project.id}
               className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105"

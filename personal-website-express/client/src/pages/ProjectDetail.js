@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import { getProjectById } from '../data/projects';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -8,24 +9,16 @@ const ProjectDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch project details from the API
-    fetch(`/api/projects/${slug}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Project not found');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setProject(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching project:', error);
-        setLoading(false);
-        // Redirect to projects page if project not found
-        navigate('/projects');
-      });
+    // Load project from static data
+    const foundProject = getProjectById(slug);
+    if (foundProject) {
+      setProject(foundProject);
+      setLoading(false);
+    } else {
+      setLoading(false);
+      // Redirect to projects page if project not found
+      navigate('/projects');
+    }
   }, [slug, navigate]);
 
   if (loading) {
