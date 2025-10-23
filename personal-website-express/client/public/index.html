@@ -15,23 +15,27 @@
     })();
   </script>
   <script>
-    // Dark mode script - must run before page loads
+    // Dark mode script - must run before page loads - DEFAULT TO DARK
     (function() {
       try {
         const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
+        // Default to dark theme
+        if (savedTheme === 'light') {
           document.documentElement.classList.remove('dark');
           document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          // Default to dark for all other cases (no saved theme, or saved as 'dark')
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+          if (!savedTheme) {
+            localStorage.setItem('theme', 'dark');
+          }
         }
       } catch (e) {
-        // Fallback to light mode if localStorage is not available
-        document.documentElement.classList.remove('dark');
-        document.documentElement.setAttribute('data-theme', 'light');
+        // Fallback to dark mode if localStorage is not available
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
       }
     })();
   </script>
@@ -76,7 +80,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
+<body class="bg-gray-900 text-white transition-colors duration-300">
   <div id="root"></div>
 </body>
 </html>
