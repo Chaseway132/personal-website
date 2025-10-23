@@ -6,9 +6,25 @@ const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Default projects for GitHub Pages (static deployment)
+  const defaultProjects = [
+    {
+      id: 1,
+      title: 'Personal Website',
+      description: 'A modern personal website built with Express.js backend and React frontend, featuring responsive design and interactive components.',
+      image: '/personal-website/images/project-placeholder-1.jpg'
+    },
+    {
+      id: 2,
+      title: 'Portfolio Project',
+      description: 'Showcase of my work and achievements, demonstrating my skills in web development, cybersecurity, and software engineering.',
+      image: '/personal-website/images/project-placeholder-2.jpg'
+    }
+  ];
+
   useEffect(() => {
-    // Fetch projects from the API
-    fetch('/api/projects')
+    // Try to fetch projects from the API
+    fetch('/personal-website/api/projects')
       .then(response => response.json())
       .then(data => {
         // Get the first two projects as featured projects
@@ -17,6 +33,8 @@ const Home = () => {
       })
       .catch(error => {
         console.error('Error fetching projects:', error);
+        // Use default projects if API fails (for GitHub Pages)
+        setFeaturedProjects(defaultProjects);
         setLoading(false);
       });
   }, []);
