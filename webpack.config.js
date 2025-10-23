@@ -9,9 +9,9 @@ module.exports = (env, argv) => {
     mode: argv.mode || 'development',
     entry: './personal-website-express/client/src/index.js',
     output: {
-      path: path.resolve(__dirname, 'personal-website-express/build'),
+      path: path.resolve(__dirname, 'docs'),
       filename: isProduction ? 'bundle.[contenthash].js' : 'bundle.js',
-      publicPath: '/',
+      publicPath: '/personal-website/',
       clean: true
     },
   module: {
@@ -52,6 +52,11 @@ module.exports = (env, argv) => {
           {
             from: 'personal-website-express/client/public/images',
             to: 'images',
+            noErrorOnMissing: true
+          },
+          {
+            from: 'personal-website-express/client/public/404.html',
+            to: '404.html',
             noErrorOnMissing: true
           }
         ]

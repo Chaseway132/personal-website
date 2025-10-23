@@ -9,9 +9,9 @@ module.exports = (env, argv) => {
     mode: argv.mode || 'development',
     entry: './client/src/index.js',
     output: {
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, '../docs'),
       filename: isProduction ? 'bundle.[contenthash].js' : 'bundle.js',
-      publicPath: '/',
+      publicPath: '/personal-website/',
       clean: true
     },
   module: {

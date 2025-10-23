@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" class="">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peter's Portfolio</title>
-  <script>
-    // Handle redirect from 404.html for client-side routing on GitHub Pages
+<!doctype html><html lang="en" class=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Peter's Portfolio</title><script>// Handle redirect from 404.html for client-side routing on GitHub Pages
     (function() {
       const redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
       if (redirect && redirect !== window.location.pathname) {
         window.history.replaceState(null, null, redirect);
       }
-    })();
-  </script>
-  <script>
-    // Dark mode script - must run before page loads
+    })();</script><script>// Dark mode script - must run before page loads
     (function() {
       try {
         const savedTheme = localStorage.getItem('theme');
@@ -33,13 +23,7 @@
         document.documentElement.classList.remove('dark');
         document.documentElement.setAttribute('data-theme', 'light');
       }
-    })();
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="/custom.css">
-  <style>
-    body {
+    })();</script><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="/custom.css"><style>body {
       font-family: 'Geist', sans-serif;
     }
 
@@ -73,10 +57,4 @@
     .backdrop-blur-sm {
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
-    }
-  </style>
-</head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
-  <div id="root"></div>
-</body>
-</html>
+    }</style><script defer="defer" src="/personal-website/bundle.5475d35b2e0f781d6d4d.js"></script></head><body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300"><div id="root"></div></body></html>

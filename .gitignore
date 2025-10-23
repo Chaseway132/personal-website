@@ -10,6 +10,7 @@ package-lock.json
 personal-website-express/build/
 personal-website-express/client/build/
 /build
+# Note: docs/ is NOT ignored - it's used for GitHub Pages
 /.next/
 /out/
 

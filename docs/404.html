@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <script>
+        // This script handles client-side routing for GitHub Pages
+        // When a user navigates to a non-existent page, GitHub Pages serves this 404.html
+        // We then redirect to the index.html with the original path as a query parameter
+        
+        const path = window.location.pathname;
+        const search = window.location.search;
+        
+        // Store the path and search in sessionStorage
+        sessionStorage.redirect = path + search;
+        
+        // Redirect to index.html
+        window.location.href = '/personal-website/';
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+
