@@ -3,6 +3,27 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
+// Set dark mode as default
+try {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === null) {
+    // No saved preference, set dark as default
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+} catch (e) {
+  // Fallback to dark mode if localStorage is not available
+  document.documentElement.classList.add('dark');
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+
 console.log('React app starting...');
 
 const container = document.getElementById('root');
@@ -16,7 +37,7 @@ if (!container) {
     const root = createRoot(container);
     console.log('Root created, rendering app...');
     root.render(
-      <BrowserRouter>
+      <BrowserRouter basename="/personal-website">
         <App />
       </BrowserRouter>
     );

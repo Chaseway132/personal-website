@@ -5,11 +5,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white dark:bg-gray-800 shadow-inner">
+    <footer className="bg-gray-800 shadow-inner">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-400">
               &copy; {currentYear} Peter Mwangi. All rights reserved.
             </p>
           </div>
@@ -18,7 +18,7 @@ const Footer = () => {
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               <span className="sr-only">GitHub</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -33,7 +33,7 @@ const Footer = () => {
               href="https://linkedin.com/in/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               <span className="sr-only">LinkedIn</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,7 +46,7 @@ const Footer = () => {
               href="https://twitter.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white"
+              className="text-gray-400 hover:text-white transition-colors"
             >
               <span className="sr-only">Twitter</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -59,16 +59,16 @@ const Footer = () => {
         </div>
         <div className="mt-4 text-center">
           <nav className="flex justify-center space-x-4">
-            <Link to="/" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+            <Link to="/" className="text-gray-400 hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/projects" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+            <Link to="/projects" className="text-gray-400 hover:text-white transition-colors">
               Projects
             </Link>
-            <Link to="/about" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+            <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white">
+            <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>

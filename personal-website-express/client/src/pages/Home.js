@@ -13,9 +13,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-gray-900 dark:bg-gray-900">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Floating Particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
@@ -47,10 +47,10 @@ const Home = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-12">
         {/* Hero Section */}
-        <section className="flex flex-col md:flex-row items-center justify-between py-12 backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 rounded-2xl shadow-xl mb-12 border border-white/20 dark:border-gray-700/30">
+        <section className="flex flex-col md:flex-row items-center justify-between py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6">
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -58,7 +58,7 @@ const Home = () => {
               Hello, I'm Peter
             </motion.h1>
             <motion.p
-              className="text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed"
+              className="text-xl text-gray-300 mb-6 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
@@ -138,9 +138,9 @@ const Home = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="py-12 backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 rounded-2xl shadow-xl mb-12">
+        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50">
           <motion.h2
-            className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white"
+            className="text-3xl font-bold mb-8 text-center text-white"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -150,76 +150,76 @@ const Home = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
             <motion.div
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0 }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Technical Skills</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Technical Skills</h3>
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Cyber Security</span>
-                    <span className="text-gray-700 dark:text-gray-300">90%</span>
+                    <span className="text-gray-300">Cyber Security</span>
+                    <span className="text-gray-300">90%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                    <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Software Development</span>
-                    <span className="text-gray-700 dark:text-gray-300">85%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                    <div className="bg-green-600 h-2.5 rounded-full" style={{ width: '85%' }}></div>
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                    <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Web Development</span>
-                    <span className="text-gray-700 dark:text-gray-300">80%</span>
+                    <span className="text-gray-300">Software Development</span>
+                    <span className="text-gray-300">85%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                    <div className="bg-indigo-600 h-2.5 rounded-full" style={{ width: '80%' }}></div>
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                    <div className="bg-green-500 h-2.5 rounded-full" style={{ width: '85%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-gray-300">Web Development</span>
+                    <span className="text-gray-300">80%</span>
+                  </div>
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                    <div className="bg-indigo-500 h-2.5 rounded-full" style={{ width: '80%' }}></div>
                   </div>
                 </div>
               </div>
             </motion.div>
             <motion.div
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.15 }}
             >
-              <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Soft Skills</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Soft Skills</h3>
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Leadership</span>
-                    <span className="text-gray-700 dark:text-gray-300">90%</span>
+                    <span className="text-gray-300">Leadership</span>
+                    <span className="text-gray-300">90%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                    <div className="bg-yellow-600 h-2.5 rounded-full" style={{ width: '90%' }}></div>
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Communication</span>
-                    <span className="text-gray-700 dark:text-gray-300">85%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                    <div className="bg-pink-600 h-2.5 rounded-full" style={{ width: '85%' }}></div>
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                    <div className="bg-yellow-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                   </div>
                 </div>
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300">Teamwork</span>
-                    <span className="text-gray-700 dark:text-gray-300">95%</span>
+                    <span className="text-gray-300">Communication</span>
+                    <span className="text-gray-300">85%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                    <div className="bg-pink-500 h-2.5 rounded-full" style={{ width: '85%' }}></div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-gray-300">Teamwork</span>
+                    <span className="text-gray-300">95%</span>
+                  </div>
+                  <div className="w-full bg-gray-600 rounded-full h-2.5">
                     <div className="bg-green-500 h-2.5 rounded-full" style={{ width: '95%' }}></div>
                   </div>
                 </div>
@@ -229,9 +229,9 @@ const Home = () => {
         </section>
 
         {/* Featured Projects Section */}
-        <section className="py-12 backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 rounded-2xl shadow-xl">
+        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl border border-gray-700/50">
           <motion.h2
-            className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white"
+            className="text-3xl font-bold mb-8 text-center text-white"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -246,13 +246,13 @@ const Home = () => {
               {featuredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
+                  className="bg-gray-700/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border border-gray-600/50"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
-                  <div className="relative h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                  <div className="relative h-48 bg-gray-600 overflow-hidden">
                     {project.image ? (
                       <img
                         src={project.image}
@@ -261,18 +261,18 @@ const Home = () => {
                       />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-xl font-semibold text-gray-500 dark:text-gray-300">Project Image</span>
+                        <span className="text-xl font-semibold text-gray-400">Project Image</span>
                       </div>
                     )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{project.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                    <p className="text-gray-300 mb-4">
                       {project.description}
                     </p>
                     <Link
                       to={`/projects/${project.id}`}
-                      className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium flex items-center group"
+                      className="text-blue-400 hover:text-blue-300 font-medium flex items-center group"
                     >
                       Learn more
                       <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
