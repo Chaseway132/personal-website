@@ -58,6 +58,11 @@ module.exports = (env, argv) => {
             from: 'personal-website-express/client/public/404.html',
             to: '404.html',
             noErrorOnMissing: true
+          },
+          {
+            from: 'personal-website-express/client/public/custom.css',
+            to: 'custom.css',
+            noErrorOnMissing: true
           }
         ]
       })

@@ -114,7 +114,7 @@ const Home = () => {
               {/* Profile Image */}
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl z-10">
                 <img
-                  src="/images/peter-profile.jpg"
+                  src="/personal-website/images/peter-profile.jpg"
                   alt="Peter Mwangi"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
