@@ -6,25 +6,28 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     try {
       const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-        setIsDarkMode(true);
-        document.documentElement.classList.add('dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
+      if (savedTheme === 'light') {
         setIsDarkMode(false);
         document.documentElement.classList.remove('dark');
         document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        // Default to dark mode
+        setIsDarkMode(true);
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (!savedTheme) {
+          localStorage.setItem('theme', 'dark');
+        }
       }
     } catch (e) {
-      // Fallback to light mode if localStorage is not available
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-      document.documentElement.setAttribute('data-theme', 'light');
+      // Fallback to dark mode if localStorage is not available
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   }, []);
 
@@ -83,6 +86,9 @@ const Navbar = () => {
             </Link>
             <Link to="/contact" className="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition-all duration-200">
               Contact
+            </Link>
+            <Link to="/blog" className="px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition-all duration-200">
+              Blog
             </Link>
 
             {/* Dark Mode Toggle */}
@@ -187,6 +193,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
+          </Link>
+          <Link
+            to="/blog"
+            className="block px-4 py-3 rounded-lg text-base font-medium text-gray-300 hover:text-blue-400 hover:bg-gray-700 transition-all duration-200"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Blog
           </Link>
         </div>
       </div>
