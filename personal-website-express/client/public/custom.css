@@ -236,3 +236,23 @@ html:not(.dark) ::-webkit-scrollbar-thumb {
 html:not(.dark) ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
 }
+
+/* Light mode card styling */
+html:not(.dark) .light-mode-card {
+  background-color: rgba(209, 213, 219, 0.5) !important;
+  border-color: rgba(209, 213, 219, 0.5) !important;
+}
+
+html:not(.dark) .light-mode-card:hover {
+  background-color: rgba(191, 193, 194, 0.6) !important;
+}
+
+/* Light mode progress bar background */
+html:not(.dark) .light-mode-progress-bg {
+  background-color: #d1d5db !important;
+}
+
+/* Light mode background gradient */
+html:not(.dark) .light-mode-bg {
+  background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb, #f3f4f6) !important;
+}

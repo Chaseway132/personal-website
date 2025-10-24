@@ -13,15 +13,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gray-900 dark:bg-gray-900">
+    <div className="min-h-screen relative overflow-hidden bg-gray-900">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 light-mode-bg">
         {/* Floating Particles */}
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-blue-400/20 dark:bg-blue-300/10 rounded-full"
+              className="absolute w-2 h-2 bg-blue-400/20 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -47,7 +47,7 @@ const Home = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-12">
         {/* Hero Section */}
-        <section className="flex flex-col md:flex-row items-center justify-between py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50">
+        <section className="flex flex-col md:flex-row items-center justify-between py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50 light-mode-card">
           <div className="md:w-1/2 mb-8 md:mb-0 px-6">
             <motion.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent"
@@ -138,7 +138,7 @@ const Home = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50">
+        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl mb-12 border border-gray-700/50 light-mode-card">
           <motion.h2
             className="text-3xl font-bold mb-8 text-center text-white"
             initial={{ opacity: 0, y: 30 }}
@@ -150,7 +150,7 @@ const Home = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
             <motion.div
-              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50"
+              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50 light-mode-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -163,7 +163,7 @@ const Home = () => {
                     <span className="text-gray-300">Cyber Security</span>
                     <span className="text-gray-300">90%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-blue-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ const Home = () => {
                     <span className="text-gray-300">Software Development</span>
                     <span className="text-gray-300">85%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-green-500 h-2.5 rounded-full" style={{ width: '85%' }}></div>
                   </div>
                 </div>
@@ -181,14 +181,14 @@ const Home = () => {
                     <span className="text-gray-300">Web Development</span>
                     <span className="text-gray-300">80%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-indigo-500 h-2.5 rounded-full" style={{ width: '80%' }}></div>
                   </div>
                 </div>
               </div>
             </motion.div>
             <motion.div
-              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50"
+              className="bg-gray-700/50 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-600/50 light-mode-card"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -201,7 +201,7 @@ const Home = () => {
                     <span className="text-gray-300">Leadership</span>
                     <span className="text-gray-300">90%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-yellow-500 h-2.5 rounded-full" style={{ width: '90%' }}></div>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ const Home = () => {
                     <span className="text-gray-300">Communication</span>
                     <span className="text-gray-300">85%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-pink-500 h-2.5 rounded-full" style={{ width: '85%' }}></div>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ const Home = () => {
                     <span className="text-gray-300">Teamwork</span>
                     <span className="text-gray-300">95%</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2.5">
+                  <div className="w-full bg-gray-600 rounded-full h-2.5 light-mode-progress-bg">
                     <div className="bg-green-500 h-2.5 rounded-full" style={{ width: '95%' }}></div>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const Home = () => {
         </section>
 
         {/* Featured Projects Section */}
-        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl border border-gray-700/50">
+        <section className="py-12 backdrop-blur-sm bg-gray-800/50 rounded-2xl shadow-xl border border-gray-700/50 light-mode-card">
           <motion.h2
             className="text-3xl font-bold mb-8 text-center text-white"
             initial={{ opacity: 0, y: 30 }}
@@ -246,7 +246,7 @@ const Home = () => {
               {featuredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  className="bg-gray-700/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border border-gray-600/50"
+                  className="bg-gray-700/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 border border-gray-600/50 light-mode-card"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
